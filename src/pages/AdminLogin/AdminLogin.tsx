@@ -30,7 +30,7 @@ const AdminLogin = () => {
         const res = await AdminApiRequest.post('/auth/signin', { phone, password });
 
         console.log(res);
-        if (res.status === 201) {
+        if (res.status === 200) {
             const data = res.data;
             context.setToken(data.token);
 
