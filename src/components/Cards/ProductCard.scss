@@ -1,0 +1,133 @@
+/* Product Card Styles */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;  /* Giới hạn chiều rộng tối đa của Card */
+  height: 500px;     /* Giới hạn chiều cao của Card */
+  overflow: hidden;  /* Đảm bảo các phần tử bị tràn ra ngoài được ẩn */
+  display: flex;
+  flex-direction: column;  /* Để các phần tử bên trong thẳng hàng theo chiều dọc */
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.product-card .img-fluid {
+  width: 100%;
+  height: 200px;  /* Giới hạn chiều cao của hình ảnh */
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Card title */
+.product-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+/* Rating */
+.product-card .rating {
+  font-size: 14px;
+  color: #ffd700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Category Badge */
+.product-card .category-badge {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Tier Badge */
+.product-card .tier {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card .tier .label {
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.product-card .tier-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Features List */
+.product-card .features-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.product-card .features-list .feature {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-card .features-list .feature i {
+  font-size: 16px;
+  color: #28a745;
+}
+
+/* Price */
+.product-card .price {
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.product-card .price .label {
+  font-weight: normal;
+}
+
+.product-card .price-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+.product-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;  /* Đẩy footer xuống cuối */
+}
+
+.product-card .card-footer button {
+  width: 48%;
+}
+
+.product-card .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.product-card .btn-success {
+  background-color: #28a745;
+  border: none;
+}

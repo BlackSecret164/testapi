@@ -1,0 +1,154 @@
+.rooms_section {
+    .img-box {
+      padding: 0px 12px;
+      
+      .card {
+        border: none;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+  
+        a {
+          border: none;
+        }
+  
+        img {
+          transition: all 0.5s ease 0s;
+          filter: brightness(0.8);
+          width: 100%;  /* Giới hạn chiều rộng của ảnh */
+          height: 200px; /* Giới hạn chiều cao của ảnh */
+          object-fit: cover; /* Đảm bảo ảnh lấp đầy không gian mà không bị biến dạng */
+          object-position: center; /* Đảm bảo ảnh được căn giữa */
+        }
+  
+        .card-title {
+          position: absolute;
+          top: 5%;
+          left: 3%;
+          font-size: 16px;
+          color: var(--white);
+          line-height: 150%;
+          font-weight: bold;
+          width: 100%;
+        }
+  
+        .rooms {
+          position: absolute;
+          right: 5%;
+          bottom: 5%;
+          font-size: 16px;
+          color: var(--primaryClr);
+          line-height: 18px;
+          font-weight: 600;
+          padding: 6px 15px;
+          background: var(--white);
+          border-radius: 15px;
+          transform: translateX(120%);
+          transition: 0.2s ease-in;
+        }
+  
+        &:hover {
+          transition: 0.2s ease-in;
+  
+          img {
+            filter: brightness(1);
+            transform: scale(1.1);
+          }
+  
+          .rooms {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+  
+  .popular {
+    padding: 5px;
+    border: none;
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+  
+    &:hover {
+      transform: translateY(-10px);
+      transition: 0.2s ease-in;
+  
+      .card-title {
+        color: var(--primaryClr);
+      }
+  
+      img {
+        transform: scale(1.1);
+        width: 100%;           /* Chiều rộng 100% để ảnh không vượt quá giới hạn của Card */
+        height: 200px;         /* Giới hạn chiều cao cho ảnh */
+        object-fit: cover;     /* Đảm bảo ảnh lấp đầy không gian mà không bị biến dạng */
+        object-position: center; /* Đảm bảo ảnh được căn giữa */
+        transition: all 0.5s ease 0s; /* Hiệu ứng chuyển động khi hover */
+      
+        @media (max-width: 768px) {
+          .popular img {
+            height: 180px; /* Điều chỉnh chiều cao ảnh trên màn hình nhỏ */
+          }
+        }
+      }
+    }
+  
+    .card-body {
+      .badge {
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin-right: 8px;
+        font-size: 14px;
+      }
+  
+      .card-title {
+        font-size: var(--bodyText);
+        font-weight: bold;
+        transition: all 0.5s ease 0s;
+        margin-bottom: 10px;
+      }
+  
+      .card-text {
+        font-size: 13px;
+        padding: 10px 0px;
+        line-height: 1.3em;
+        position: relative;
+        color: #4f5e71;
+  
+        i {
+          position: absolute;
+          top: 15px;
+        }
+      }
+  
+      .text {
+        margin-left: 16px;
+        display: block;
+        font-size: 13px;
+      }
+  
+      .reviwe {
+        margin-bottom: 12px;
+  
+        i {
+          color: var(--primaryClr);
+        }
+      }
+    }
+  
+    .card-footer {
+      background: none;
+  
+      p {
+        font-size: var(--bodyText);
+        color: #4f5e71;
+  
+        strong {
+          font-size: var(--bodyText);
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  

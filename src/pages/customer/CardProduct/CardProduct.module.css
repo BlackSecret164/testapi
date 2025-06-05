@@ -1,0 +1,309 @@
+.cardProduct {
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(16, 30, 54, 0.08);
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardProduct:hover {
+  box-shadow: 0 4px 16px 0 rgba(16, 30, 54, 0.16);
+  transform: translateY(-2px);
+}
+
+.cardProductUnavailable {
+  opacity: 0.7;
+}
+
+.cardProductUnavailable .cardProductImage {
+  filter: grayscale(100%);
+}
+
+.cardProductImageWrapper {
+  position: relative;
+  background-color: #f9fafb;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.cardProductBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  z-index: 2;
+}
+
+.cardProductUnavailableOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.cardProductUnavailableOverlay span {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.cardProductImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cardProductImage:hover {
+  transform: scale(1.05);
+}
+
+.cardProductContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardProductCategory {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.cardProductTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+}
+
+.cardProductTitle:hover {
+  color: #f97316;
+}
+
+.cardProductDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0.5rem 0 0 0;
+}
+
+.cardProductMaterials {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cardProductMaterialsLabel {
+  font-weight: 500;
+  color: #374151;
+}
+
+.cardProductMaterialsList {
+  color: #6b7280;
+}
+
+.cardProductTemperature {
+  margin-bottom: 0.25rem;
+}
+
+.cardProductTemperatureLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+}
+
+.cardProductTemperatureOptions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  right: 0;
+}
+
+.cardProductTemperatureBtn {
+  padding: 0.375rem 0.55rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cardProductTemperatureBtn:hover:not(:disabled) {
+  border-color: #f97316;
+  background-color: #fff7ed;
+}
+
+.cardProductTemperatureBtn.active {
+  background-color: #f97316;
+  color: #ffffff;
+  border-color: #f97316;
+}
+
+.cardProductTemperatureBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cardProductSizes {
+  margin-bottom: 0.25rem;
+}
+
+.cardProductSizeLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.cardProductSizeOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cardProductSizeBtn {
+  padding: 0.375rem 0.55rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cardProductSizeBtn:hover:not(:disabled) {
+  border-color: #f97316;
+  background-color: #fff7ed;
+}
+
+.cardProductSizeBtn.active {
+  background-color: #f97316;
+  color: #ffffff;
+  border-color: #f97316;
+}
+
+.cardProductSizeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cardProductFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.cardProductPrice {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f97316;
+  margin: 0;
+}
+
+.cardProductAddBtn {
+  background-color: #f97316;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.cardProductAddBtn:hover:not(:disabled) {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+.cardProductAddBtn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cardProductAddIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cardProductContent {
+    padding: 0.75rem;
+  }
+
+  .cardProductTitle {
+    font-size: 1rem;
+  }
+
+  .cardProductPrice {
+    font-size: 1.125rem;
+  }
+
+  .cardProductAddBtn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .cardProductSizeOptions,
+  .cardProductTemperatureOptions {
+    gap: 0.375rem;
+  }
+
+  .cardProductSizeBtn,
+  .cardProductTemperatureBtn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardProductFooter {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .cardProductAddBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,99 @@
+.history-section {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+  
+    .ant-table {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      .ant-table-thead > tr > th {
+        background-color: #e6f7ff;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .ant-table-tbody > tr > td {
+        text-align: center;
+      }
+    }
+  
+    .ant-btn-primary {
+      background-color: #4096ff;
+      border-color: #4096ff;
+  
+      &:hover {
+        background-color: #1d78ff;
+        border-color: #1d78ff;
+      }
+    }
+  
+    .ant-modal {
+      .ant-modal-header {
+        background-color: #e6f7ff;
+        font-weight: bold;
+      }
+  
+      .ant-modal-title {
+        color: #1890ff;
+      }
+  
+      .ant-modal-footer {
+        display: flex;
+        justify-content: space-between;
+  
+        .ant-btn {
+          &:first-child {
+            background-color: #ff7875;
+            border-color: #ff7875;
+            color: #fff;
+  
+            &:hover {
+              background-color: #ff4d4f;
+              border-color: #ff4d4f;
+            }
+          }
+  
+          &:last-child {
+            background-color: #52c41a;
+            border-color: #52c41a;
+  
+            &:hover {
+              background-color: #389e0d;
+              border-color: #389e0d;
+            }
+          }
+        }
+      }
+    }
+  
+    .rating-container {
+      display: flex;
+      flex-direction: column;  /* Arrange elements in a column */
+      justify-content: center;
+      align-items: center;  /* Center elements horizontally and vertically */
+      text-align: center;  /* Ensure text is centered */
+  
+      .ant-rate {
+        gap: 10px !important;  /* Add space between stars */
+        font-size: 30px;  /* Increase font size for better visibility */
+        margin-bottom: 10px; /* Add space below the stars */
+        display: flex;
+        justify-content: center; /* Align stars to center */
+      }
+  
+      .rating-value {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        
+      }
+  
+      .rating-wrapper {
+        display: flex;
+        justify-content: center; /* Align the rating value next to the stars */
+        align-items: center;
+      }
+    }
+  }
+  

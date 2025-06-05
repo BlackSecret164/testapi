@@ -1,0 +1,14 @@
+.bg-login:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0.2;
+    background-color: #faecc2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30vw auto;
+}

@@ -1,0 +1,170 @@
+@import "../../../scss/variables.scss";
+.container-fluid {
+    padding: 20px;
+
+    .sticky-header-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background-color: #fff;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-custom {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 12px 0;
+      margin: 0;
+    }
+
+    .header-actions {
+      padding-top: 4px;
+    }
+
+  
+    .h3, .h4 {
+      color: #333;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  
+    button {
+      border-radius: 8px;
+      font-size: 14px;
+      width: 40px !important;
+      height: 40px !important;
+      margin: 0px 10px;
+      transition: background-color 0.3s ease;
+      color:get-color($primary, "100");
+      background-color: get-color($accent, "100");
+
+      &.ant-btn-primary {
+        background-color: get-color($neutral, "100") !important;
+        color: get-color($primary, "100") !important;
+        border: 1px solid get-color($primary, "100");
+
+      &:hover{
+          background-color: get-color($primary, "100") !important;
+          color: get-color($neutral, "100") !important;
+          border: 1.5px solid get-color($primary, "200") !important;
+          
+        }
+      }
+
+      &.ant-btn-default {
+        background-color: get-color($accent, "100") !important;
+        color: get-color($primary, "200") !important;
+        border: 1.25px solid get-color($secondary, "100");
+
+        &:hover {
+          background-color: lightblue !important;
+          color: get-color($neutral, "100") !important;
+          border: 1.5px solid get-color($primary, "200") !important;
+        }
+      }
+      
+      &.ant-btn-danger {
+        background-color: get-color($neutral, "100") !important;
+        color: get-color($accent, "200") !important;
+        border: 1px solid lightpink !important;
+
+      &:hover {
+        background-color: lightpink !important;
+        color: get-color($neutral, "100") !important;
+        border: 1.5px solid get-color($accent, "200") !important;
+        }
+      }
+      &.ant-btn-link {
+        color: get-color($primary, "100") !important;
+        background-color: transparent;
+
+        &:hover {
+          color: get-color($secondary, "100") !important;
+          background-color: transparent;
+        }
+      }
+    }
+    .search-form {
+      margin-left: 100px;
+    }
+  
+    .ant-modal {
+      
+      .ant-modal-header {
+        justify-self: center;
+        background-color: #f0f8ff;
+        border-bottom: 1px solid #e0e0e0;
+        font-weight: bold;
+      }
+  
+      .ant-modal-title {
+        justify-self: center;
+        color: #333;
+      }
+  
+      .ant-modal-footer {
+        display: flex;
+        justify-content: space-between;
+  
+        button {
+          width: 100px;
+        }
+      }
+  
+      .ant-form-item {
+  
+        label {
+          font-weight: 500;
+          color: #555;
+        }
+        .ant-picker-input{
+          border: none !important;
+        }
+  
+        input, textarea{
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          padding: 8px;
+  
+          &:focus {
+            border-color: #1890ff;
+            box-shadow: 0 0 5px rgba(24, 144, 255, 0.5);
+          }
+          .ant-picker-input{
+            border: none !important;
+          }
+        }
+      }
+    }
+  
+    .ant-table-wrapper {
+      margin-right: 10px !important;
+    }
+    
+    .ant-table {
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+  
+      .ant-table-thead > tr > th {
+        background-color: #f0f8ff;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .ant-table-tbody > tr > td {
+        text-align: center;
+  
+        .ant-space-item {
+          button {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  
+  }
+
+  

@@ -1,0 +1,121 @@
+@import "../../../scss/variables.scss";
+
+.header-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 32px;
+  background-color: get-color($background, "100") !important;
+
+  .h2, .h4 {
+    font-weight: bold !important;
+    color: get-color($primary, "100");
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container-fluid1 {
+  padding: 20px;
+
+  .stat-cards {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo các phần tử sẽ xuống dòng khi không đủ không gian */
+    gap: 20px;
+
+    .card {
+      flex: 1;
+      min-width: 200px; /* Đặt kích thước tối thiểu để card không quá nhỏ */
+      max-width: calc(33.33% - 20px); /* Đặt kích thước tối đa cho màn hình lớn */
+      text-align: center;
+      background: linear-gradient(0deg, #35728c, #f9dede);
+      color: #fff;
+      border-radius: 15px;
+      padding: 5px;
+      margin: 10px;
+      border: none;
+      box-shadow: 0 5px 10px rgb(196, 228, 244);
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+
+      .card-text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+
+  .charts {
+    margin: 30px 10px;
+
+    .chart-full-width {
+      background: linear-gradient(0deg, #e2f1f8, #e8f3fa);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 10px 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Đầy đủ chiều rộng cho màn hình nhỏ */
+      max-width: 70%; /* Giới hạn cho màn hình lớn */
+      margin: 0 auto;
+    }
+  }
+
+  .charts-row {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo xuống dòng khi cần */
+    justify-content: space-between;
+    gap: 20px;
+
+    .chart-left,
+    .chart-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+
+      .chart-card,
+      .donut-chart {
+        background: get-color($background, "100");
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .stat-cards {
+    .card {
+      max-width: calc(50% - 20px); /* Hiển thị 2 card trên một hàng */
+    }
+  }
+
+  .charts {
+    .chart-full-width {
+      max-width: 90%; /* Giới hạn chiều rộng trên màn hình nhỏ */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-cards {
+    .card {
+      max-width: 100%; /* Một card trên một hàng */
+    }
+  }
+
+  .charts-row {
+    flex-direction: column; /* Sắp xếp các biểu đồ theo cột */
+    .chart-left, .chart-right {
+      flex: none;
+    }
+  }
+}
